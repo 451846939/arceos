@@ -50,6 +50,18 @@
 #![feature(doc_cfg)]
 #![feature(doc_auto_cfg)]
 
+#![feature(hashmap_internals)]
+#![feature(extend_one)]
+#![feature(hasher_prefixfree_extras)]
+#![feature(error_in_core)]
+#![feature(try_reserve_kind)]
+#![feature(thread_local)]
+#![feature(const_hash)]
+#![feature(allocator_api)]
+// #![feature(hash_raw_entry)]
+// #![feature(hash_extract_if)]
+// #![feature(map_try_insert)]
+
 #[cfg(feature = "alloc")]
 extern crate alloc;
 
@@ -60,6 +72,7 @@ pub use alloc::{boxed, collections, format, string, vec};
 #[doc(no_inline)]
 pub use core::{arch, cell, cmp, hint, marker, mem, ops, ptr, slice, str};
 
+pub mod map;
 #[macro_use]
 mod macros;
 

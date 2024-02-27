@@ -50,6 +50,7 @@ pub mod irq;
 
 #[cfg(feature = "paging")]
 pub mod paging;
+pub mod random;
 
 /// Console input and output.
 pub mod console {

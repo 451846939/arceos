@@ -337,3 +337,8 @@ pub mod io {
         pub type AxPollState;
     }
 }
+
+/// Returns the random number.
+pub fn ax_random() -> u128 {
+    axhal::random::random()
+}
